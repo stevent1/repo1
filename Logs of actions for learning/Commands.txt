@@ -1,0 +1,100 @@
+Microsoft Windows [Version 10.0.19041.685]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Users\Steve>git --version
+git version 2.34.1.windows.1
+
+C:\Users\Steve>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\Steve>cd C:\git
+The system cannot find the path specified.
+
+C:\Users\Steve>cd C:
+C:\Users\Steve
+
+C:\Users\Steve>cd C:\
+
+C:\>mkdir git_test
+
+C:\>dir git*
+ Volume in drive C has no label.
+ Volume Serial Number is D825-6086
+
+ Directory of C:\
+
+30/11/2021  10:41    <DIR>          git_test
+               0 File(s)              0 bytes
+               1 Dir(s)  19,539,910,656 bytes free
+
+C:\>cd git_test
+
+C:\git_test>git init
+Initialized empty Git repository in C:/git_test/.git/
+
+C:\git_test>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\git_test>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code1.sql
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\git_test>git add .
+
+C:\git_test>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   code1.sql
+        new file:   info.txt
+
+
+C:\git_test>git commit -m "This is my first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Steve@Steve-PC.(none)')
+
+C:\git_test>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   code1.sql
+        new file:   info.txt
+
+
+C:\git_test>git config --global user.email "stez01@hotmail.com"
+
+C:\git_test>git config --global user.name "stevent1"
+
+C:\git_test>git commit -m "This is my first commit"
+[master (root-commit) f054342] This is my first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 code1.sql
+ create mode 100644 info.txt
+
+C:\git_test>
